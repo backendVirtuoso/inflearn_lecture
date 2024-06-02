@@ -7,10 +7,16 @@ import Library from './chapter_03/Library';
 import Clock from './chapter_04/Clock';
 import CommentList from './chapter_05/CommentList';
 import NotificationList from './chapter_06/NotificationList';
+import Accommodate from './chapter_07/Accommodate';
+import Confirmbutton from './chapter_08/Confirmbutton';
+import LandingPage from './chapter_09/LandingPage';
+import AttendanceBook from './chapter_10/AttendanceBook';
+import SignUp from './chapter_11/SignUp';
+import Calculator from './chapter_12/Calculator';
 
 ReactDOM.render(
   <React.StrictMode>
-    <NotificationList />
+    <Calculator />
   </React.StrictMode>,
   document.getElementById('root')
 );
