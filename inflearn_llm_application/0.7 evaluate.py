@@ -243,3 +243,17 @@ experiment_results = evaluate(
     experiment_prefix="inflearn-evaluator-lecture-hallucination",
     metadata={"version": "income tax v1, gpt-4o"}, 
 )
+
+"""
+# LLM Evaluation의 중요성
+
+서비스를 앉어적으로 운영하기 위해서
+사용자가 정확한 정보를 받을 수 있는지
+
+"할루시네이션" -> "환각"
+LLM이 잘못된 답변을 생성하는 경우
+
+## Dataset -> 도메인 전문가가 작성한 "정답지"
+특정 질문이 들어오면 -> 이런 답변을 해야한다.
+
+"""

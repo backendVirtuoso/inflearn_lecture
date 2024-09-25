@@ -60,3 +60,23 @@ response = client.chat.completions.create(
 )
 
 print(response.choices[0].message.content)
+
+
+"""
+
+# 1. 패키지 설치
+
+# 2. Knowledge Base 구성을 위한 데이터 생성
+- LangChain의 TextSplitter를 사용할 수 없기 때문에 [python-docx](https://github.com/python-openxml/python-docx)와 [tiktoken](https://github.com/openai/tiktoken)을 활용해서 chunk 생성
+
+# 3. 답변 생성을 위한 Retrieval
+- `Chroma`에 저장한 데이터를 유사도 검색(`query`)를 활용해서 가져옴
+    - method이름은 `query`지만 유사도 검색 실행
+
+# 4. Augmentation을 위한 Prompt 활용 및 답변 생성
+- Retrieval된 데이터는 system prompt에 추가해서 LLM의 배경지식으로 활용
+- Large Language Model은 사용자 질문에 대해 system prompt에 있는 배경지식을 활용하여 답변 생성
+
+
+
+"""

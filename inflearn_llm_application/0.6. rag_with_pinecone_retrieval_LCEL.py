@@ -69,3 +69,29 @@ ai_response = tax_chain.invoke({"question": query})
 
 print(ai_response)
 
+
+
+'''
+# 1. 패키지 설치
+
+# 2. Knowledge Base 구성을 위한 데이터 생성
+- [3.4 LangChain을 활용한 Vector Database 변경 (Chroma ➡️ Pinecone)](https://github.com/jasonkang14/inflearn-rag-notebook/blob/main/3.4%20LangChain%EC%9D%84%20%ED%99%9C%EC%9A%A9%ED%95%9C%20Vector%20Database%20%EB%B3%80%EA%B2%BD%20(Chroma%20%E2%9E%A1%EF%B8%8F%20Pinecone).ipynb)와 동일함
+
+# 3. 답변 생성을 위한 Retrieval
+- `RetrievalQA`에 전달하기 위해 `retriever` 생성
+- `search_kwargs` 의 `k` 값을 변경해서 가져올 문서의 갯수를 지정할 수 있음
+- `.invoke()` 를 호출해서 어떤 문서를 가져오는지 확인 가능
+
+# 4. Augmentation을 위한 Prompt 활용
+- Retrieval된 데이터는 LangChain에서 제공하는 프롬프트(`"rlm/rag-prompt"`) 사용
+
+# 5. 답변 생성
+- [RetrievalQA](https://docs.smith.langchain.com/old/cookbook/hub-examples/retrieval-qa-chain)를 통해 LLM에 전달
+    - `RetrievalQA`는 [create_retrieval_chain](https://python.langchain.com/v0.2/docs/how_to/qa_sources/#using-create_retrieval_chain)으로 대체됨
+    - 실제 ChatBot 구현 시 `create_retrieval_chain`으로 변경하는 과정을 볼 수 있음
+- 하단의 `dictionary_chain` 과 연계하여 사용
+
+# 6. Retrieval을 위한 keyword 사전 활용
+- Knowledge Base에서 사용되는 keyword를 활용하여 사용자 질문 수정
+- LangChain Expression Language (LCEL)을 활용한 Chain 연계
+'''
